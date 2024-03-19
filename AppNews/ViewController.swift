@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         tablaNoticias.dataSource = self
         
         bucarNoticiasDos ()
+        
+        view.backgroundColor = .black
     
     }
     

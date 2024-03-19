@@ -13,12 +13,11 @@ import SafariServices
 
 class ViewController: UIViewController {
     
-    
-    
     var articuloDeNoticias : [Noticia] = []
     
-    
     @IBOutlet weak var tablaNoticias: UITableView!
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +25,9 @@ class ViewController: UIViewController {
         //Registro de nueva celda
         
         tablaNoticias.register(UINib(nibName: "CeldaNoticiaTableViewTableViewCell", bundle: nil), forCellReuseIdentifier: "celdaNoticia")
-        
         tablaNoticias.delegate = self
         tablaNoticias.dataSource = self
+        
         bucarNoticiasDos ()
     
     }
@@ -63,7 +62,6 @@ class ViewController: UIViewController {
             }
         }
         url.resume()
-        
     }
 }
 
@@ -102,7 +100,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SFSafariVi
                 }
             }
             urlImage.resume()
-            
         }
         return celda
     }
@@ -132,14 +129,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SFSafariVi
             viewController.view.addSubview(activityIndicator)
             safariViewController.present(viewController, animated: true)
         }
-
+        
         
         
     }
+    
     func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
         
         controller.dismiss(animated: true)
-        
     }
 }
 

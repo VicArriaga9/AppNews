@@ -28,8 +28,10 @@ class ViewController: UIViewController {
         tablaNoticias.delegate = self
         tablaNoticias.dataSource = self
         
-        bucarNoticiasDos ()
-        view.backgroundColor = .lightGray
+        bucarNoticiasDos ()     
+    view.backgroundColor = .lightGray
+        
+    
     }
     
     func bucarNoticiasDos ()  {

@@ -81,6 +81,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SFSafariVi
         celda.tituloNoticiaLabel.text = articuloDeNoticias[indexPath.row].title
         celda.descriptionNoticiaLabel.text = articuloDeNoticias[indexPath.row].description
         celda.backgroundColor = .systemPink
+        celda.tituloNoticiaLabel.textColor = .white
         
         if let urlStringImage = URL(string: articuloDeNoticias[indexPath.row].urlToImage ?? "") {
             let urlImage = URLSession.shared.dataTask(with: urlStringImage) {(data, response, error) in
